@@ -1,6 +1,10 @@
-import { Schema, model, connect } from 'mongoose';
-import { IGuardian, ILocalGuardian, IStudent, IStudentName } from './student.interface';
-
+import { Schema, model } from 'mongoose';
+import {
+  IGuardian,
+  ILocalGuardian,
+  IStudent,
+  IStudentName,
+} from './student.interface';
 
 const studentNameSchema = new Schema<IStudentName>({
   firstName: { type: String, required: true },
@@ -32,14 +36,13 @@ const studentSchema = new Schema<IStudent>({
   contactNo: { type: String, required: true },
   email: { type: String, required: true },
   emergencyContactNo: { type: String, required: true },
-  bloodGroup: ['A+' , 'A-' , 'B+' , 'B-' , 'AB+' , 'AB-' , 'O+' , 'O-'],
-  presentAddress:{type:String,required:true},
-  parmenentAddress:{type:String,required:true},
-  guardian:studentGuardianSchema,
-  localGuardian:studentLocalGuardianSchema,
-  profileImage:{type:String},
-  isActive:["active","blocked"]
+  bloodGroup: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'],
+  presentAddress: { type: String, required: true },
+  parmenentAddress: { type: String, required: true },
+  guardian: studentGuardianSchema,
+  localGuardian: studentLocalGuardianSchema,
+  profileImage: { type: String },
+  isActive: ['active', 'blocked'],
 });
 
-
-export const Student = model<IStudent>("Student",studentSchema)
+export const Student = model<IStudent>('Student', studentSchema);
