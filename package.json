@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:dev":"ts-node-dev --respawn --transpile-only src/server.ts",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier . --write",
-    "build":"tsc",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
+    "@types/cors": "^2.8.17",
     "@types/eslint__js": "^8.42.3",
     "@types/express": "^5.0.0",
     "eslint": "^9.15.0",

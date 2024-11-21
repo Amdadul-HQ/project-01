@@ -2,13 +2,13 @@ import { Schema, model, connect } from 'mongoose';
 
 
 
-interface IStudentName{
+export interface IStudentName{
     firstName:string,
     middleName:string,
     lastName:string
 }
 
-interface IGuardian {
+export interface IGuardian {
     fatherName:string;
     fatherOccupation:string;
     fatherContactNo:string;
@@ -17,7 +17,7 @@ interface IGuardian {
     motherContactNo:string
 }
 
-interface ILocalGuardian {
+export interface ILocalGuardian {
     name:string;
     occupation:string;
     contactNo:string;
