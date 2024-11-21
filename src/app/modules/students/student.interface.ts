@@ -17,15 +17,26 @@ interface IGuardian {
     motherContactNo:string
 }
 
-interface IStudent {
+interface ILocalGuardian {
+    name:string;
+    occupation:string;
+    contactNo:string;
+    address:string;
+}
+
+export interface IStudent {
+  id:string;
   name: IStudentName;
   email: string;
   gender: 'male' | 'female';
-  bateOfBirth: string;
+  dateOfBirth: string;
   contactNo: string;
   emergencyContactNo: string;
   bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
   presentAddress:string;
   parmenentAddress:string;
   guardian:IGuardian;
+  localGuardian: ILocalGuardian;
+  profileImage?:string;
+  isActive: "active" | "blocked"
 }
